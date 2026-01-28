@@ -15,7 +15,8 @@ export class MyPipelineStack extends cdk.Stack {
         input: CodePipelineSource.connection(
           'mustafa-asif/my-pipeline', 'main',
           {
-            connectionArn:'arn:aws:codeconnections:ap-south-1:763701915116:connection/eefbdaf7-3fd7-421c-bc6e-37602deba6fd'
+            connectionArn:'arn:aws:codeconnections:ap-south-1:763701915116:connection/eefbdaf7-3fd7-421c-bc6e-37602deba6fd',
+            triggerOnPush:true
           }
         ),
         commands: [
