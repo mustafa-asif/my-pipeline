@@ -8,7 +8,7 @@ export class MyPipelineStack extends cdk.Stack {
     super(scope, id, props);
 
 
-    // testing pipeline code
+    // testing pipeline code 2
     const pipeline = new CodePipeline(this, 'MyPipeline', {
       pipelineName: 'MyServicePipeline',
       synth: new ShellStep('Synth', {
