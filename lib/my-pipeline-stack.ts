@@ -11,7 +11,7 @@ export class MyPipelineStack extends cdk.Stack {
       pipelineName: 'MyServicePipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.connection(
-          'mustafa-asif/my-pipline', 'main',
+          'mustafa-asif/my-pipeline', 'main',
           {
             connectionArn:'arn:aws:codeconnections:ap-south-1:763701915116:connection/eefbdaf7-3fd7-421c-bc6e-37602deba6fd'
           }
