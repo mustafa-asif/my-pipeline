@@ -14,3 +14,5 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `npx cdk synth`   emits the synthesized CloudFormation template
 * check if pipeline works
 testing again
+
+* try sutomate pipeline
