@@ -14,9 +14,10 @@ export class MyPipelineStack extends cdk.Stack {
       pipelineName: 'MyServicePipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.connection(
-          'mustafa-asif/my-pipeline', 'main',
+          'owner/my-pipeline', 'main',
           {
-            connectionArn:'arn:aws:codeconnections:ap-south-1:763701915116:connection/eefbdaf7-3fd7-421c-bc6e-37602deba6fd',
+            // copy connection arn from setting code pipeline in aws console
+            connectionArn:'arn:aws:codeconnections:ap-south-1:1234567890:connection/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx',
             triggerOnPush:true
           }
         ),
@@ -29,7 +30,8 @@ export class MyPipelineStack extends cdk.Stack {
     });
 
     pipeline.addStage(new MyPipelineAppStage(this, 'test',{
-      env: { account: '763701915116', region: 'ap-south-1' }
+      //  add account number and region
+      env: { account: '1234567890', region: 'ap-south-1' }
     }));
 
   }
